@@ -1,0 +1,33 @@
+ {% extends 'base.html' %}
+ {% load staticfiles %}
+ {% load humanize %}
+
+ {% block content %}
+
+<div class="container">
+    {% for capital in capitals %}
+        <div class="row">
+            <div class="box">
+                <div class="intro-text text-center">
+               
+                        <hr>
+                        <h2>
+                    <a href="/capital_detail/{{capital.pk}}">{{ capital.name }}</a>
+                    
+                        </h2>
+                        <hr>
+                    <p class="city-block">
+                        <b>State:</b> {{ capital.state.name }} |
+                        <b>Population:</b> {{capital.capital_population|intcomma }}
+                    </p>
+              
+                </div>
+            </div>
+        </div>
+    {% endfor %} 
+</div>
+
+
+
+       
+{% endblock %}  

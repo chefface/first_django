@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template View</title>
+</head>
+	<body>
+
+		{% for state, cities in states.items %}
+
+			<h3>{{ state }}</h3>
+			</br>
+
+			{% for city in cities %}
+				{{ city }}
+				</br>
+
+			{% endfor %}
+			
+
+		{% endfor %}
+
+	</body>
+</html>

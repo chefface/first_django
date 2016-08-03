@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List</title>
+</head>
+<body>
+
+	
+	{% for state in states %}
+		<a href="/detail/{{state.pk}}/"> {{ state.name }} </a>
+ 
+		<br>
+
+	{% endfor %}
+	
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search With Post</title>
+</head>
+<body>
+<form action="/city_search_post/" method="POST">
+	{% csrf_token %}
+
+
+	City:
+	{{ form.city }}
+	<br>
+	State:
+	{{ form.state }}
+	<br>
+	<input type="submit" value="Search">
+
+</form>
+
+{{ form.errors }}
+
+{% for city in cities %}
+
+	{{ city.name }} | {{ city.zipcode }} <br>
+	
+{% endfor %}
+</body>
+</html>

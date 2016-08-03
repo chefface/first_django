@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>City Search</title>
+</head>
+<body>
+
+{% block content %}
+<div class="row" style="background-color: #FFF;">
+	<div class="box">
+
+		{% crispy form %}
+
+		{% for city in cities %}
+			{{ city.name }}
+			{{ city.zipcode }}
+			<br>
+		{% endfor %}
+
+	</div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
