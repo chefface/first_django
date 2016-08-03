@@ -38,4 +38,5 @@ urlpatterns = [
     url(r'^city_list_class_view/', views.CityListView.as_view()),
     url(r'^state_detail_class_view/(?P<pk>\d+)/', views.StateDetailView.as_view()),
     url(r'^city_detail_class_view/(?P<pk>\d+)/', views.CityDetailView.as_view()),
-]
+    
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
