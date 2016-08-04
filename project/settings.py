@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'states', 
         'HOST': '127.0.0.1', 
         'USER': 'root', 
-        'PASSWORD': 'root', 
+        'PASSWORD': 'insert-your-password-here', 
         'PORT': ''
     }
 }
@@ -113,3 +113,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
