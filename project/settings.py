@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'states', 
         'HOST': '127.0.0.1', 
         'USER': 'root', 
-        'PASSWORD': '', 
+        'PASSWORD': 'root', 
         'PORT': ''
     }
 }
